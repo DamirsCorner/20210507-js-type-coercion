@@ -7,7 +7,7 @@ export interface PriceInfo {
 }
 
 export function getCurrentPrice(price: PriceInfo): number {
-  return price.discountedPrice && price.discountedPrice.price
+  return price.discountedPrice && price.discountedPrice.price !== undefined
     ? price.discountedPrice.price
     : price.basePrice;
 }

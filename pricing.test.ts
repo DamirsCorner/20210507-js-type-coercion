@@ -39,13 +39,14 @@ test("free price", () => {
 });
 
 test("conditional operator", () => {
-  const condition = free.discountedPrice && free.discountedPrice.price;
+  const condition =
+    free.discountedPrice && free.discountedPrice.price !== undefined;
 
   expect(condition).toBeTruthy();
 });
 
 test("discounted price value", () => {
-  const condition = free.discountedPrice.price;
+  const condition = free.discountedPrice.price !== undefined;
 
   expect(condition).toBeTruthy();
 });
